@@ -1,22 +1,49 @@
 .homepage
-	.hero-slider
-		max-width: 1100px
-		margin: 50px auto
-		border: 1px solid red
-		background: black
-		.owl-nav
-			padding: 0 0 30px 70px
+	.hero
+		.hero-slider
+			max-width: 1100px
+			margin: 50px auto
+			border: 1px solid red
+			background: black
+			.owl-nav
+				padding: 0 0 30px 70px
+				position: absolute
+				bottom: 0
+				left: 0
+			.owl-next
+				margin-left: 50px
+		.slider-item-wrap
+			border: 1px solid red
+			position: relative
+		.slider-content
+			max-width: 480px
 			position: absolute
-			bottom: 0
-			left: 0
+			bottom: 90px
+			left: 70px
+
+	.review
+		background-color: $gray300
+		text-align: center
+		padding: 60px 0 100px 0
+		.section-title
+			margin: 0 auto 80px auto
+			width: 90%
+			max-width: 900px
+		.subtitle
+			padding: 32px 0 16px 0
+		.slider-item-wrap
+			max-width: 580px
+			margin: 0 auto
+		.owl-nav
+			margin-top: 50px
 		.owl-next
 			margin-left: 50px
-	.slider-item-wrap
-		// height: 584px
-		border: 1px solid red
-		position: relative
-	.slider-content
-		max-width: 480px
-		position: absolute
-		bottom: 90px
-		left: 70px
+		.owl-prev
+			margin-right: 50px
+		@media only screen and (max-width: 1024px)
+			text-align: left
+			padding: 40px 0
+			.section-title
+				margin: 0 auto 40px auto
+			.subtitle
+				padding: 20px 0
