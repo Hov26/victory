@@ -20,6 +20,7 @@ body
   padding: 12px 0
   min-width: 150px
   .cta-text
+    text-decoration: underline
     transition: all 0.1s linear
   &:hover .cta-text
     opacity: 0.6
@@ -31,9 +32,13 @@ body
 
 .location
   margin: 20px 0 0 0
+  @media only screen and (max-width: 767px)
+    margin: 10px 0 6px 0
 
 .place
   margin: 6px 0 13px 0
+  @media only screen and (max-width: 767px)
+    margin: 6px 0
 
 .summary
   margin-bottom: 9px
