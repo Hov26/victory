@@ -102,7 +102,43 @@
 			.subtitle
 				padding: 20px 0
 
-	
+	.home-portfolio
+		.row
+			// margin-top: 40px
+			position: relative
+			&:first-child
+				&:before
+					content: ""
+					position: absolute
+					width: 100%
+					height: 500px
+					bottom: 0
+					left: 0
+					z-index: -1
+					background-image: url('../images/dest/hero-wave.png')
+					transform: scaleX(-1)
+					background-repeat: no-repeat
+					background-size: cover
+					background-position: bottom
+		.row-2, .row-4
+			background-color: $sectionBg
+			padding: 60px 0
+		.image-right
+			.figure
+				max-width: 564px
+		.image-left
+			.figure
+				max-width: 650px
+		.figure
+				width: 100%
+				display: block
+				font-size: 0
+		.port-img
+			width: 100%
+		.port-content
+			max-width: 450px
+			margin: 0 80px
+		.title-42
 
 
 @media only screen and (max-width: 1280px)
@@ -116,8 +152,14 @@
 		.hero 
 			.hero-logo
 				max-width: 80vw
-		.hero-socials
-			display: none
+			.hero-socials
+				display: none
+
+		.home-portfolio
+			.row
+				padding: 0 0 90px 0
+			.port-content
+				margin: 16px 0 0 0
 
 @media only screen and (max-width: 767px)
 	.homepage 
@@ -131,6 +173,8 @@
 			.slider-container
 				padding: 0
 				transform: translateY(-40px)
+			.slider-wrapper
+				background-image: none
 			.slider-content
 				max-width: 90%
 				left: 30px
@@ -148,3 +192,10 @@
 			.why-content
 				width: 100%
 
+		.home-portfolio
+			.container
+			.row
+				&:first-child
+					&:before
+						height: 120px
+				
