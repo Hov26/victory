@@ -49,10 +49,11 @@
 
 	.why-victory
 		background-color: $sectionBg
-		padding: 300px 0 100px 0
+		padding: 300px 0 200px 0
 		margin: -120px 0 0 0
 		.section-title
 			margin: 50px 0 88px 0
+			max-width: 1000px
 		.why-container
 			display: flex
 			justify-content: space-between
@@ -104,9 +105,10 @@
 
 	.home-portfolio
 		.row
-			// margin-top: 40px
 			position: relative
-			&:first-child
+			&.row-1
+				.container
+					transform: translateY(-50px)
 				&:before
 					content: ""
 					position: absolute
@@ -120,9 +122,19 @@
 					background-repeat: no-repeat
 					background-size: cover
 					background-position: bottom
+		.row-2
+			padding-bottom: 100px
+			.container
+				transform: translateY(-10px)
+		.row-3
+			padding-bottom: 150px
+			.container
+				transform: translateY(-50px)
+		.row-4
+			.container
+				transform: translateY(-100px)
 		.row-2, .row-4
 			background-color: $sectionBg
-			padding: 60px 0
 		.image-right
 			.figure
 				max-width: 564px
@@ -130,9 +142,15 @@
 			.figure
 				max-width: 650px
 		.figure
-				width: 100%
-				display: block
-				font-size: 0
+			width: 100%
+			display: block
+			font-size: 0
+			position: relative
+		.port-logo
+			width: 276px
+			position: absolute
+			top: -192px
+			left: -70px
 		.port-img
 			width: 100%
 		.port-content
@@ -140,12 +158,32 @@
 			margin: 0 80px
 		.title-42
 
+	.license
+		padding: 100px 0
+		.row	
+			display: flex
+			align-items: flex-start
+			margin: 45px 0 0 0
+			&:nth-child(2)
+				.title-54
+					max-width: 1000px
+		svg
+			margin: 12px 0 0 0
+			path 
+				stroke-dasharray: 0 300
+				transition: all 0.6s linear
+				&.animate
+					stroke-dasharray: 300 0
+		.title-54
+			margin: 0 0 0 50px
+		
 
 @media only screen and (max-width: 1280px)
 	.homepage 
 		.hero 
 			.hero-logo
 				max-width: 700px
+
 
 @media only screen and (max-width: 1023px)
 	.homepage 
@@ -160,6 +198,9 @@
 				padding: 0 0 90px 0
 			.port-content
 				margin: 16px 0 0 0
+			.port-logo
+				display: none
+
 
 @media only screen and (max-width: 767px)
 	.homepage 
@@ -193,7 +234,6 @@
 				width: 100%
 
 		.home-portfolio
-			.container
 			.row
 				&:first-child
 					&:before
