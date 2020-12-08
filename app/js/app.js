@@ -1,5 +1,4 @@
 $(document).ready(function() {
-    // var topMenu = $("#header-content");
     var page = $(window);
     var line = $('.line')
     page.scroll(function() {
@@ -7,4 +6,7 @@ $(document).ready(function() {
             line.addClass("animate");
         }
     });
+
+    var titleSliderLength = $('.title-slider .owl-stage .owl-item').not('.cloned').length
+    $('.current-item').text('01/' + ('0' + titleSliderLength))
 })

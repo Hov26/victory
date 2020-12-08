@@ -166,7 +166,7 @@
 
 
         <!-- LICENSE -->
-        <section class="license">
+        <section class="license hide">
             <div class="row">
                 <svg width="230" height="51" xmlns="http://www.w3.org/2000/svg"><path class="line" d="M71.483 1H229v49H0" stroke="#979797" fill="none"/></svg>
                 <p class="title-54 black fw-300">we are licensed in 7 states</p>
@@ -181,6 +181,32 @@
             </div>
         </section>
 
+
+        <!-- SLIDER PORTFOLIO -->
+        <section class="slider-potfolio">
+            <div class="container">
+                <div class="slider-wrapper">
+                    <div class="service-slider owl-carousel owl-theme no-arrows">
+                        <div class="slider-item">
+                            <img src="../images/dest/port2.png" alt="Slider item">
+                        </div>
+                        <div class="slider-item">
+                            <img src="../images/dest/port2.png" alt="Slider item">
+                        </div>
+                        <div class="slider-item">
+                            <img src="../images/dest/port2.png" alt="Slider item">
+                        </div>
+                    </div>
+                    <div class="title-slider-item">
+                        <div class="current-item title-70"></div>
+                        <div class="title-slider with-white-arrows owl-carousel owl-theme">
+                            <p class="title-40 fw-300 white">Construction Design</p>
+                            <p class="title-40 fw-300 white">Construction Design 2</p>
+                            <p class="title-40 fw-300 white">Construction Design 3</p>
+                        </div>
+                    </div>
+                </div>
+        </section>
 
         <!-- REVIEWS -->
         <section class="review hide">
@@ -229,7 +255,12 @@
         //     typeSpeed: 50
         // });
         $(document).ready(function() {
+
             var owl = $('.owl-carousel');
+            var serviceSlider = $('.service-slider');
+            var titleSlider = $('.title-slider');
+            var heroSlider = $('.hero-slider');
+
             owl.owlCarousel({
                 dots: false,
                 nav: true,
@@ -237,9 +268,10 @@
                 items: 1,
                 loop: true,
                 margin: 0,
-                autoplay: true,
-                autoplayTimeout: 3000,
+                // autoplay: false,
+                autoplayTimeout: 5000,
                 smartSpeed: 800,
+                // animateOut: 'fadeOut',
                 autoplayHoverPause: true,
                 // responsive: {
                 //     0: {
@@ -247,6 +279,48 @@
                 //     }
                 // }
             });
+
+            heroSlider.owlCarousel({
+                // autoplay: true,
+            });
+            serviceSlider.owlCarousel({
+                // autoplay: false,
+            });
+            titleSlider.owlCarousel({
+                // autoplay: false,
+            });
+
+            owl.on('changed.owl.carousel', function(e) {
+                // $('.current-item').text('0' + (e.item.index - 1) + '/')
+                // $('.slider-length').text('0' + e.item.count)
+                $('.current-item').text('0' + (e.item.index - 1) + '/' + ('0' + e.item.count))
+            });
+
+            $('.title-slider .owl-next').click(function() {
+                serviceSlider.trigger('next.owl.carousel');
+            })
+            $('.title-slider .owl-prev').click(function() {
+                serviceSlider.trigger('prev.owl.carousel');
+            })
+
+            $('.service-slider').owlCarousel({
+                onDragged: callback
+            });
+
+            function callback(event) {
+                var items = event.item.count
+                console.log('itemsssss', items)
+                    // // Provided by the core
+                    // var element = event.target; // DOM element, in this example .owl-carousel
+                    // var name = event.type; // Name of the event, in this example dragged
+                    // var namespace = event.namespace; // Namespace of the event, in this example owl.carousel
+                    // var items = event.item.count; // Number of items
+                    // var item = event.item.index; // Position of the current item
+                    // // Provided by the navigation plugin
+                    // var pages = event.page.count; // Number of pages
+                    // var page = event.page.index; // Position of the current page
+                    // var size = event.page.size; // Number of items per page
+            }
         });
     </script>
     <script src="js/app.min.js"></script>
