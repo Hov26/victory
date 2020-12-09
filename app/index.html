@@ -16,17 +16,16 @@
 <body>
     <main class="homepage">
 
-        <!-- <div id="typed-strings">
-        <span class="title-102 fw-300">Why Victory Bridge - We find beauty in something done well</span>
-        </div>
-        <h1 id="typed" class="title-102 fw-300"></h1> -->
 
         <!-- HERO -->
-        <section class="hero hide">
+        <section class="hero ">
             <div class="top-content">
                 <img class="hero-logo" src="../images/dest/hero-logo.svg" alt="Logo">
                 <div class="container">
-                    <h1 class="title-102 black fw-400 section-title">Why Victory Bridge - We find beauty in something done well</h1>
+                    <div id="main-heading">
+                        <h1 aria-hidden="true">Why Victory Bridge - We find beauty in something done well</h1>
+                    </div>
+                    <p id="typed-main-heading" class="title-102 fw-400 section-title"></p>
                     <div class="hero-socials">
                         <a href="#" class="social white facebook" aria-label="Facebook">
                             <img src="../images/dest/menu-icon-facebook.svg" alt="Facebook">
@@ -47,7 +46,7 @@
                 <div class="container slider-container">
                     <div class="hero-slider with-white-arrows owl-carousel owl-theme">
                         <div class="slider-item-wrap">
-                            <img src="../images/dest/slide1.png" alt="Sider">
+                            <img src="../images/dest/slide1.jpg" alt="Sider">
                             <div class="slider-content">
                                 <p class="slider-title title-42 white fw-500">Rosenbaum Angle house museum. 1</p>
                                 <p class="paragraph-14 gray location">LOCATION</p>
@@ -57,7 +56,7 @@
                             </div>
                         </div>
                         <div class="slider-item-wrap">
-                            <img src="../images/dest/slide1.png" alt="Sider">
+                            <img src="../images/dest/slide1.jpg" alt="Sider">
                             <div class="slider-content">
                                 <p class="slider-title title-42 white fw-500">Rosenbaum Angle house museum. 2</p>
                                 <p class="paragraph-14 gray location">LOCATION</p>
@@ -67,7 +66,7 @@
                             </div>
                         </div>
                         <div class="slider-item-wrap">
-                            <img src="../images/dest/slide1.png" alt="Sider">
+                            <img src="../images/dest/slide1.jpg" alt="Sider">
                             <div class="slider-content">
                                 <p class="slider-title title-42 white fw-500">Rosenbaum Angle house museum. 3</p>
                                 <p class="paragraph-14 gray location">LOCATION</p>
@@ -83,13 +82,13 @@
 
 
         <!-- WHY VICTORY -->
-        <section class="why-victory hide">
+        <section class="why-victory ">
             <div class="container">
                 <p class="paragraph-18 gray fw-500">WHY VICTORY BRIDGE?</p>
                 <h4 class="title-60 section-title">Elegant solutions to the most challenging projects at hand.</h4>
                 <div class="why-container">
                     <a href="#" class="read-more" aria-label="Read more">
-                        <img src="images/dist/icon-enter.svg" alt="Read more">
+                        <img data-src="images/dist/icon-enter.svg" alt="Read more" class="lozad">
                         <span class="cta-text">read more</span>
                     </a>
                     <div class="why-content">
@@ -104,7 +103,7 @@
 
 
         <!-- HOMEPAGE PORTFOLIO -->
-        <section class="home-portfolio hide">
+        <section class="home-portfolio ">
             <div class="row row-1">
                 <div class="container image-right">
                     <div class="port-content">
@@ -115,7 +114,7 @@
                         <p class="paragraph-16 black">The SVG format is a vector format that is editable and widely supported by design software and web browsers.</p>
                     </div>
                     <figure class="figure">
-                        <img src="../images/dest/port1.png" class="port-img" alt="Architecture Portfolio">
+                        <img data-src="../images/dest/port1.jpg" class="port-img lozad" alt="Architecture Portfolio">
                     </figure>
                 </div>
             </div>
@@ -129,7 +128,7 @@
                         <p class="paragraph-16 black">The SVG format is a vector format that is editable and widely supported by design software and web browsers.</p>
                     </div>
                     <figure class="figure">
-                        <img src="../images/dest/port2.png" class="port-img" alt="Architecture Portfolio">
+                        <img data-src="../images/dest/port2.jpg" class="lozad port-img" alt="Architecture Portfolio">
                     </figure>
                 </div>
             </div>
@@ -143,7 +142,7 @@
                         <p class="paragraph-16 black">The SVG format is a vector format that is editable and widely supported by design software and web browsers.</p>
                     </div>
                     <figure class="figure">
-                        <img src="../images/dest/port3.png" class="port-img" alt="Architecture Portfolio">
+                        <img data-src="../images/dest/port3.jpg" class="lozad port-img" alt="Architecture Portfolio">
                     </figure>
                 </div>
             </div>
@@ -157,8 +156,8 @@
                         <p class="paragraph-16 black">The SVG format is a vector format that is editable and widely supported by design software and web browsers.</p>
                     </div>
                     <figure class="figure">
-                        <img src="../images/dest/hero-logo.svg" class="port-logo" alt="Logo">
-                        <img src="../images/dest/port4.png" class="port-img" alt="Architecture Portfolio">
+                        <img data-src="../images/dest/hero-logo.svg" class="port-logo lozad" alt="Logo">
+                        <img data-src="../images/dest/port4.jpg" class="port-img lozad" alt="Architecture Portfolio">
                     </figure>
                 </div>
             </div>
@@ -166,35 +165,47 @@
 
 
         <!-- LICENSE -->
-        <section class="license hide">
+        <section class="license ">
             <div class="row">
                 <svg width="230" height="51" xmlns="http://www.w3.org/2000/svg"><path class="line" d="M71.483 1H229v49H0" stroke="#979797" fill="none"/></svg>
-                <p class="title-54 black fw-300">we are licensed in 7 states</p>
+                <div id="license1">
+                    <p aria-hidden="true">we are licensed in 7 states</p>
+                </div>
+                <p id="typed-license1" class="title-54 black fw-300"></p>
+                <!-- <p class="title-54 black fw-300">we are licensed in 7 states</p> -->
             </div>
             <div class="row">
                 <svg width="230" height="70" xmlns="http://www.w3.org/2000/svg"><g fill="#FFF" stroke="#979797" fill-rule="evenodd"><path class="line" d="M-2 20h218v49H-2z"/><path class="line" d="M-2 1h231v49H-2z"/></g></svg>
-                <p class="title-54 black fw-300">we are a team of multi-lingual and multi-cultural experts</p>
+                <div id="license2">
+                    <p aria-hidden="true">we are a team of multi-lingual and multi-cultural experts</p>
+                </div>
+                <p id="typed-license2" class="title-54 black fw-300"></p>
+                <!-- <p class="title-54 black fw-300">we are a team of multi-lingual and multi-cultural experts</p> -->
             </div>
             <div class="row">
                 <svg width="230" height="51" xmlns="http://www.w3.org/2000/svg"><path class="line" d="M0 1h229v49h-79.356" stroke="#979797" fill="none"/></svg>
-                <p class="title-54 black fw-300">we are specialized in elegant solutions</p>
+                <div id="license3">
+                    <p aria-hidden="true">we are specialized in elegant solutions</p>
+                </div>
+                <p id="typed-license3" class="title-54 black fw-300"></p>
+                <!-- <p class="title-54 black fw-300">we are specialized in elegant solutions</p> -->
             </div>
         </section>
 
 
         <!-- SLIDER service -->
-        <section class="section-service-slider hide">
+        <section class="section-service-slider ">
             <div class="container">
                 <div class="service-slider-wrapper">
                     <div class="service-slider owl-carousel owl-theme no-arrows">
                         <figure class="slider-item">
-                            <img class="img-cover" src="../images/dest/port2.png" alt="Slider item">
+                            <img class="img-cover lozad" data-src="../images/dest/port2.jpg" alt="Slider item">
                         </figure>
                         <figure class="slider-item">
-                            <img class="img-cover" src="../images/dest/port2.png" alt="Slider item">
+                            <img class="img-cover lozad" data-src="../images/dest/port2.jpg" alt="Slider item">
                         </figure>
                         <figure class="slider-item">
-                            <img class="img-cover" src="../images/dest/port2.png" alt="Slider item">
+                            <img class="img-cover lozad" data-src="../images/dest/port2.jpg" alt="Slider item">
                         </figure>
                     </div>
                     <div class="title-slider-item">
@@ -210,10 +221,10 @@
 
 
         <!-- FOUNDER -->
-        <section class="founder hide">
+        <section class="founder ">
             <div class="top-content">
                 <h3 class="title-64 black section-title">Meet the founder</h3>
-                <img src="../images/dest/hero-logo.svg" alt="Brand logo" class="logo">
+                <img data-src="../images/dest/hero-logo.svg" alt="Brand logo" class="logo lozad">
             </div>
             <div class="container">
                 <div class="founder-info-container">
@@ -223,14 +234,14 @@
                             format that is editable and widely.</p>
                     </div>
                     <figure class="founder-figure">
-                        <img class="img-cover" src="../images/dest/founder.png" alt="Founder">
+                        <img class="lozad img-cover" data-src="../images/dest/founder.jpg" alt="Founder">
                     </figure>
                 </div>
             </div>
         </section>
 
         <!-- REVIEWS -->
-        <section class="review hide">
+        <section class="review ">
             <div class="container">
                 <h4 class="title-64 section-title">What our customers says</h4>
                 <div class="review-slider with-black-arrows owl-carousel owl-theme">
@@ -258,9 +269,8 @@
 
 
         <!-- CONTACT -->
-
         <footer class="contact">
-            <img class="contact-wave" src="../images/dest/contact-wave.png" alt="wave" aria-hidden="true">
+            <img class="contact-wave lozad" data-src="../images/dest/contact-wave.png" alt="wave" aria-hidden="true">
             <div class="container">
                 <h4 class="section-title title-75 black fw-300">Feel free to contact us</h4>
                 <div class="contact-info-container">
@@ -283,7 +293,7 @@
                 </div>
             </div>
             <div class="rights">
-                <img class="logo" src="../images/dest/hero-logo.svg" alt="Brand logo">
+                <img class="logo lozad" data-src="../images/dest/hero-logo.svg" alt="Brand logo">
                 <div class="container">
                     <small class="paragraph-14 fw-400 black">VICTORY BRIDGE. ALL RIGHTS RESERVED</small>
                 </div>
@@ -295,21 +305,43 @@
 
     </main>
 
-
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="js/owl.min.js"></script>
+    <script src="js/lozad.min.js"></script>
 
     <script>
-        // var typed = new Typed('#typed', {
-        //     stringsElement: '#typed-strings',
-        //     typeSpeed: 50
-        // });
+        // initialize lazy loading
+        const observer = lozad();
+        observer.observe();
+
+        // typed.js Main heading
+        var typed = new Typed('#typed-main-heading', {
+            stringsElement: '#main-heading',
+            typeSpeed: 50
+        });
+        // typed.js license section 1st line
+        var typed = new Typed('#typed-license1', {
+            stringsElement: '#license1',
+            typeSpeed: 50
+        });
+        // typed.js license section 2ndt line
+        var typed = new Typed('#typed-license2', {
+            stringsElement: '#license2',
+            typeSpeed: 60
+        });
+        // typed.js license section 3rd line
+        var typed = new Typed('#typed-license3', {
+            stringsElement: '#license3',
+            typeSpeed: 70
+        });
+
         $(document).ready(function() {
 
             var owl = $('.owl-carousel');
             var serviceSlider = $('.service-slider');
             var titleSlider = $('.title-slider');
             var heroSlider = $('.hero-slider');
+
 
             owl.owlCarousel({
                 dots: false,
@@ -340,12 +372,6 @@
                 // autoplay: false,
             });
 
-            owl.on('changed.owl.carousel', function(e) {
-                // $('.current-item').text('0' + (e.item.index - 1) + '/')
-                // $('.slider-length').text('0' + e.item.count)
-                $('.current-item').text('0' + (e.item.index - 1) + '/' + ('0' + e.item.count))
-            });
-
             $('.title-slider .owl-next').click(function() {
                 serviceSlider.trigger('next.owl.carousel');
             })
@@ -353,24 +379,11 @@
                 serviceSlider.trigger('prev.owl.carousel');
             })
 
-            $('.service-slider').owlCarousel({
-                onDragged: callback
+            owl.on('changed.owl.carousel', function(e) {
+                $('.current-item').text('0' + (e.item.index - 1) + '/' + ('0' + e.item.count))
             });
 
-            function callback(event) {
-                var items = event.item.count
-                console.log('itemsssss', items)
-                    // // Provided by the core
-                    // var element = event.target; // DOM element, in this example .owl-carousel
-                    // var name = event.type; // Name of the event, in this example dragged
-                    // var namespace = event.namespace; // Namespace of the event, in this example owl.carousel
-                    // var items = event.item.count; // Number of items
-                    // var item = event.item.index; // Position of the current item
-                    // // Provided by the navigation plugin
-                    // var pages = event.page.count; // Number of pages
-                    // var page = event.page.index; // Position of the current page
-                    // var size = event.page.size; // Number of items per page
-            }
+
         });
     </script>
     <script src="js/app.min.js"></script>
