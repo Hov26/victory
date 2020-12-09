@@ -1,3 +1,6 @@
+@import '../partials/section-license'
+@import '../partials/founder'
+	
 .homepage
 	.hero
 		.top-content
@@ -157,25 +160,6 @@
 			max-width: 450px
 			margin: 0 80px
 		.title-42
-
-	.license
-		padding: 100px 0
-		.row	
-			display: flex
-			align-items: flex-start
-			margin: 45px 0 0 0
-			&:nth-child(2)
-				.title-54
-					max-width: 1000px
-		svg
-			margin: 12px 0 0 0
-			path 
-				stroke-dasharray: 0 300
-				transition: all 0.6s linear
-				&.animate
-					stroke-dasharray: 300 0
-		.title-54
-			margin: 0 0 0 50px
 		
 	.section-service-slider
 		.service-slider-wrapper
@@ -185,10 +169,6 @@
 			width: 100%
 			max-width: 880px
 			height: 800px
-		.service-slider-img
-			width: 100%
-			height: 100%
-			object-fit: cover
 		.counter
 			display: flex
 		.current-item, .slider-length
@@ -222,10 +202,7 @@
 		.hero 
 			.hero-logo
 				max-width: 700px
-		
-		.license
-			.row
-				flex-direction: column
+
 
 @media only screen and (max-width: 1023px)
 	.homepage 
@@ -285,13 +262,6 @@
 					&:before
 						height: 120px
 				
-		.license
-			.row
-				margin: 25px 0 0 0
-			.title-54
-				padding: 25px 30px 0 30px
-				margin: 0
-
 		.section-service-slider
 			.container
 				padding: 0
