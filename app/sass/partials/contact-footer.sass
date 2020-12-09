@@ -44,11 +44,11 @@
 		font-variant-numeric: oldstyle-nums
 	.contact-socials
 		display: flex
+		margin: 67px 0 150px 0
 	.black-social
 		display: block
 		width: 42px
 		height: 42px
-		margin: 67px 0 150px 0
 		display: flex
 		justify-content: center
 		align-items: center
@@ -70,4 +70,25 @@
 			background-position: -10px -190px
 	.rights
 		background-color: $footerBg
-		padding: 30px 0
+		height: 80px
+		display: flex
+		align-items: center
+
+
+@media only screen and (max-width: 767px)
+	.contact
+		padding: 54px 0 0 0
+		.logo
+			max-width: 376px
+		.contact-wave
+			display: none
+		.contact-info-container
+			flex-direction: column-reverse
+			margin-top: 30px
+		.map-wrap
+			margin: 30px 0 0 0
+			max-width: initial
+		.address
+			margin: 20px 0 0 0
+		.contact-socials
+			margin: 40px 0 182px 0
