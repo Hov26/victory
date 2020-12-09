@@ -8,14 +8,13 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css/app.min.css">
-    <link rel="stylesheet" href="fonts/fonts.css">
-    <link rel="stylesheet" href="css/owl.css">
+    <link rel="stylesheet" href="fonts/fonts.min.css">
+    <link rel="stylesheet" href="css/owl.min.css">
     <script src="js/typed.js"></script>
 </head>
 
 <body>
     <main class="homepage">
-
 
         <!-- HERO -->
         <section class="hero ">
@@ -23,9 +22,9 @@
                 <img class="hero-logo" src="../images/dest/hero-logo.svg" alt="Logo">
                 <div class="container">
                     <div id="main-heading">
-                        <h1 aria-hidden="true">Why Victory Bridge - We find beauty in something done well</h1>
+                        <p aria-hidden="true">Why Victory Bridge - We find beauty in something done well</p>
                     </div>
-                    <p id="typed-main-heading" class="title-102 fw-400 section-title"></p>
+                    <h1 id="typed-main-heading" class="title-102 fw-400 section-title"></h1>
                     <div class="hero-socials">
                         <a href="#" class="social white facebook" aria-label="Facebook">
                             <img src="../images/dest/menu-icon-facebook.svg" alt="Facebook">
@@ -165,14 +164,13 @@
 
 
         <!-- LICENSE -->
-        <section class="license ">
+        <section class="license " id='license'>
             <div class="row">
                 <svg width="230" height="51" xmlns="http://www.w3.org/2000/svg"><path class="line" d="M71.483 1H229v49H0" stroke="#979797" fill="none"/></svg>
                 <div id="license1">
                     <p aria-hidden="true">we are licensed in 7 states</p>
                 </div>
                 <p id="typed-license1" class="title-54 black fw-300"></p>
-                <!-- <p class="title-54 black fw-300">we are licensed in 7 states</p> -->
             </div>
             <div class="row">
                 <svg width="230" height="70" xmlns="http://www.w3.org/2000/svg"><g fill="#FFF" stroke="#979797" fill-rule="evenodd"><path class="line" d="M-2 20h218v49H-2z"/><path class="line" d="M-2 1h231v49H-2z"/></g></svg>
@@ -180,7 +178,6 @@
                     <p aria-hidden="true">we are a team of multi-lingual and multi-cultural experts</p>
                 </div>
                 <p id="typed-license2" class="title-54 black fw-300"></p>
-                <!-- <p class="title-54 black fw-300">we are a team of multi-lingual and multi-cultural experts</p> -->
             </div>
             <div class="row">
                 <svg width="230" height="51" xmlns="http://www.w3.org/2000/svg"><path class="line" d="M0 1h229v49h-79.356" stroke="#979797" fill="none"/></svg>
@@ -188,7 +185,6 @@
                     <p aria-hidden="true">we are specialized in elegant solutions</p>
                 </div>
                 <p id="typed-license3" class="title-54 black fw-300"></p>
-                <!-- <p class="title-54 black fw-300">we are specialized in elegant solutions</p> -->
             </div>
         </section>
 
@@ -300,93 +296,14 @@
             </div>
         </footer>
 
-
-
-
     </main>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="js/owl.min.js"></script>
     <script src="js/lozad.min.js"></script>
-
-    <script>
-        // initialize lazy loading
-        const observer = lozad();
-        observer.observe();
-
-        // typed.js Main heading
-        var typed = new Typed('#typed-main-heading', {
-            stringsElement: '#main-heading',
-            typeSpeed: 50
-        });
-        // typed.js license section 1st line
-        var typed = new Typed('#typed-license1', {
-            stringsElement: '#license1',
-            typeSpeed: 50
-        });
-        // typed.js license section 2ndt line
-        var typed = new Typed('#typed-license2', {
-            stringsElement: '#license2',
-            typeSpeed: 60
-        });
-        // typed.js license section 3rd line
-        var typed = new Typed('#typed-license3', {
-            stringsElement: '#license3',
-            typeSpeed: 70
-        });
-
-        $(document).ready(function() {
-
-            var owl = $('.owl-carousel');
-            var serviceSlider = $('.service-slider');
-            var titleSlider = $('.title-slider');
-            var heroSlider = $('.hero-slider');
-
-
-            owl.owlCarousel({
-                dots: false,
-                nav: true,
-                navElement: 'div',
-                items: 1,
-                loop: true,
-                margin: 0,
-                // autoplay: false,
-                autoplayTimeout: 5000,
-                smartSpeed: 800,
-                // animateOut: 'fadeOut',
-                autoplayHoverPause: true,
-                // responsive: {
-                //     0: {
-                //         items: 1
-                //     }
-                // }
-            });
-
-            heroSlider.owlCarousel({
-                // autoplay: true,
-            });
-            serviceSlider.owlCarousel({
-                // autoplay: false,
-            });
-            titleSlider.owlCarousel({
-                // autoplay: false,
-            });
-
-            $('.title-slider .owl-next').click(function() {
-                serviceSlider.trigger('next.owl.carousel');
-            })
-            $('.title-slider .owl-prev').click(function() {
-                serviceSlider.trigger('prev.owl.carousel');
-            })
-
-            owl.on('changed.owl.carousel', function(e) {
-                $('.current-item').text('0' + (e.item.index - 1) + '/' + ('0' + e.item.count))
-            });
-
-
-        });
-    </script>
+    <script src="js/home.js"></script>
     <script src="js/app.min.js"></script>
+
 </body>
 
 </html>
