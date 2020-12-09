@@ -26,3 +26,30 @@
 		display: block
 		width: 100%
 		max-width: 540px		
+
+@media only screen and (max-width: 1023px)
+	.founder
+		.top-content
+			flex-direction: column-reverse
+		.section-title
+			margin: 0 auto 30px auto
+		.founder-info-container
+			flex-direction: column-reverse
+			align-items: center
+		.founder-info
+			text-align: left
+			max-width: 540px
+			margin: 30px 0 0 0
+
+@media only screen and (max-width: 767px)
+	.founder
+		background-image: none
+		.section-title
+			align-self: flex-start
+			margin: 0 0 30px 50px
+		.logo
+			display: none
+		.founder-figure, .founder-info
+			max-width: initial
+		.founder-description, .founder-info
+			margin: 14px 0 0 0
