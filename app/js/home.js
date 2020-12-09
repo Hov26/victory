@@ -1,6 +1,10 @@
-// initialize lazy loading
+// init lazy loading
 const observer = lozad();
 observer.observe();
+
+// init wow js
+new WOW().init();
+
 
 $(document).ready(function() {
 
@@ -18,15 +22,15 @@ $(document).ready(function() {
                     showCursor: false
                 });
                 // typed.js license section 2ndt line
-                var typed = new Typed('#typed-license2', {
+                var typed2 = new Typed('#typed-license2', {
                     stringsElement: '#license2',
-                    typeSpeed: 90,
+                    typeSpeed: 70,
                     showCursor: false
                 });
                 // typed.js license section 3rd line
-                var typed = new Typed('#typed-license3', {
+                var typed3 = new Typed('#typed-license3', {
                     stringsElement: '#license3',
-                    typeSpeed: 140,
+                    typeSpeed: 90,
                     showCursor: false
                 });
             }
