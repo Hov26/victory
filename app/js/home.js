@@ -52,43 +52,79 @@ $(document).ready(function() {
     });
 
 
-    var owl = $('.owl-carousel');
-    var serviceSlider = $('.service-slider');
-    var titleSlider = $('.title-slider');
-    var heroSlider = $('.hero-slider');
+    // var owl = $('.owl-carousel');
+    var heroSlider = $('.hero-slider.owl-carousel');
+    var serviceSlider = $('.service-slider.owl-carousel');
+    var titleSlider = $('.title-slider.owl-carousel');
+    var reviewSlider = $('.review-slider.owl-carousel');
 
-    owl.owlCarousel({
+    heroSlider.owlCarousel({
         dots: false,
         nav: true,
         navElement: 'div',
         items: 1,
         loop: true,
         margin: 0,
-        // autoplay: false,
+        autoplay: true,
         autoplayTimeout: 5000,
         smartSpeed: 800,
-        // animateOut: 'fadeOut',
-        autoplayHoverPause: true,
-        // responsive: {
-        //     0: {
-        //         items: 1
-        //     }
-        // }
-    });
-
-    heroSlider.owlCarousel({
-        // autoplay: true,
+        autoplayHoverPause: true
     });
     serviceSlider.owlCarousel({
-        // autoplay: false,
+        dots: false,
+        nav: true,
+        navElement: 'div',
+        items: 1,
+        loop: true,
+        margin: 0,
+        autoplay: false,
+        autoplayTimeout: 5000,
+        smartSpeed: 800,
+        autoplayHoverPause: true,
+        mouseDrag: false,
+        touchDrag: false,
+        onInitialized: setIndexLength
     });
     titleSlider.owlCarousel({
-        // autoplay: false,
+        dots: false,
+        nav: true,
+        navElement: 'div',
+        items: 1,
+        loop: true,
+        margin: 0,
+        autoplay: false,
+        autoplayTimeout: 5000,
+        smartSpeed: 800,
+        animateOut: 'fadeOut',
+        autoplayHoverPause: true,
+        mouseDrag: false,
+        touchDrag: false
+    });
+    reviewSlider.owlCarousel({
+        dots: false,
+        nav: true,
+        navElement: 'div',
+        items: 1,
+        loop: true,
+        margin: 0,
+        autoplay: true,
+        autoplayTimeout: 5000,
+        smartSpeed: 800,
+        autoplayHoverPause: true,
+        mouseDrag: false,
+        touchDrag: false
     });
 
+
+
     // Set service slider current index and items length
-    var titleSliderLength = $('.title-slider .owl-stage .owl-item').not('.cloned').length
-    $('.current-item').text('01/' + ('0' + titleSliderLength))
+    function setIndexLength(e) {
+        $('.current-item').text('0' + (e.item.index - 1) + '/' + ('0' + e.item.count))
+    }
+
+    serviceSlider.on('changed.owl.carousel', function(e) {
+        $('.current-item').text('0' + (e.item.index - 1) + '/' + ('0' + e.item.count))
+    });
 
     $('.title-slider .owl-next').click(function() {
         serviceSlider.trigger('next.owl.carousel');
@@ -97,8 +133,5 @@ $(document).ready(function() {
         serviceSlider.trigger('prev.owl.carousel');
     })
 
-    owl.on('changed.owl.carousel', function(e) {
-        $('.current-item').text('0' + (e.item.index - 1) + '/' + ('0' + e.item.count))
-    });
 
 });
