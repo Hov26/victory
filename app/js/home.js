@@ -11,6 +11,7 @@ $(document).ready(function() {
     var line = $('.line')
     var licenseSectionTopPosition = $('.license').position().top
 
+    // license section start animation function
     var typeTextOnce = (function() {
         var executed = false;
         return function() {
@@ -37,6 +38,7 @@ $(document).ready(function() {
         };
     })();
 
+    // Animate license section SVGs
     $(window).scroll(function() {
         if (($(this).scrollTop() - licenseSectionTopPosition) > licenseSectionTopPosition) {
             line.addClass("animate");
@@ -122,10 +124,12 @@ $(document).ready(function() {
         $('.current-item').text('0' + (e.item.index - 1) + '/' + ('0' + e.item.count))
     }
 
+    // Change current slide index
     serviceSlider.on('changed.owl.carousel', function(e) {
         $('.current-item').text('0' + (e.item.index - 1) + '/' + ('0' + e.item.count))
     });
 
+    // Trig service slider image by clicking arrow
     $('.title-slider .owl-next').click(function() {
         serviceSlider.trigger('next.owl.carousel');
     })
@@ -133,16 +137,22 @@ $(document).ready(function() {
         serviceSlider.trigger('prev.owl.carousel');
     })
 
-
+    // Open menu
     $(".hamburger-btn").click(function() {
         $('.menu-container').addClass('open')
         $('.menu-wave').fadeIn(1500)
         $('.menu-li').addClass('show')
+        $('.menu-brand-logo').addClass('show')
+        $('body').addClass('scroll-off')
     })
+
+    // Close menu
     $(".close-btn").click(function() {
         $('.menu-container').removeClass('open')
         $('.menu-wave').hide()
         $('.menu-li').removeClass('show')
+        $('.menu-brand-logo').removeClass('show')
+        $('body').removeClass('scroll-off')
     })
 
 
