@@ -134,4 +134,14 @@ $(document).ready(function() {
     })
 
 
+    $(".hamburger-btn").click(function() {
+        $('.menu-container').addClass('open')
+        $('.menu-wave').fadeIn(2000)
+    })
+    $(".close-btn").click(function() {
+        $('.menu-container').removeClass('open')
+        $('.menu-wave').hide()
+    })
+
+
 });
