@@ -118,6 +118,10 @@
 	&:hover
 		opacity: 0.5
 
+@media only screen and (max-width: 1400px)
+	.menu-socials
+		right: 30px
+
 @media only screen and (min-width: 1400px)
 	.header
 		.container
@@ -129,9 +133,14 @@
 			font-size: 102px
 
 @media only screen and (max-width: 767px)
+	.top-nav-container, .opened-menu-container
+		height: 60px
 	.menu-container
 		.title-102
 			font-size: 62px
+	.socials-container
+		position: static
+		transform: initial
 	.menu-socials
 		position: initial
 		display: flex
