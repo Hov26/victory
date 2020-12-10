@@ -18,7 +18,7 @@ function browsersync() {
 function scripts() {
     return src(['app/js/**/*.js', '!app/**/*.min.js'])
         .pipe(concat('app.min.js'))
-        .pipe(uglify())
+        // .pipe(uglify())
         .pipe(dest('app/js/'))
         .pipe(browserSync.stream())
 }
