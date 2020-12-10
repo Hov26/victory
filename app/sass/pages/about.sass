@@ -2,5 +2,35 @@
 @import '../partials/founder'
 @import '../partials/contact-footer'
 	
-body
-	background: none
+.about
+	.hero
+		position: relative
+		background-image: url('../images/dest/wave-hero-about.png')
+		background-repeat: no-repeat
+		background-size: cover
+		background-position: left bottom
+		padding: 260px 0 
+		.hero-logo
+			width: 100%
+			max-width: 991px
+			position: absolute
+			top: 0
+			right: 0
+		.content
+			max-width: 575px
+			margin: 0 0 0 40px
+		.paragraph-18
+			padding: 36px 0 0 0
+
+
+@media only screen and (max-width: 1280px)
+	.about
+		.hero
+			padding: 160px 0 120px 0
+			background-size: 127% 59%
+			background-position: bottom
+			.hero-logo
+				display: none
+			.content
+				margin: 0
+	
