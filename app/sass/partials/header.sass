@@ -1,10 +1,9 @@
-.header
-	.container
-		display: flex
-		justify-content: space-between
-		height: 100px
-		display: flex
-		align-items: center
+.top-nav-container, .opened-menu-container
+	display: flex
+	justify-content: space-between
+	height: 100px
+	display: flex
+	align-items: center
 	
 .header.header-container
 	position: fixed
@@ -12,6 +11,10 @@
 	right: 0
 	z-index: 10
 	width: 100%
+	transition: all 0.3s linear
+	&.with-bg
+		box-shadow: 0px 2px 8px 0px rgba(0,0,0,0.45)
+		background-color: $white
 	.menu-logo
 		padding: 20px 0
 	.hamburger-btn
@@ -92,6 +95,9 @@
 	transition: all 0.8s ease
 .menu-link
 	display: block
+	transition: all 0.2s linear
+	&:hover
+		opacity: 0.6
 
 .socials-container
 	position: absolute
@@ -106,6 +112,11 @@
 	transform: translateY(-50%)
 	.social
 		margin: 30px 0 0 0
+
+.menu-logo-link, .hamburger-btn, .close-btn
+	transition: all 0.2s linear
+	&:hover
+		opacity: 0.5
 
 @media only screen and (min-width: 1400px)
 	.header
