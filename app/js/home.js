@@ -136,11 +136,13 @@ $(document).ready(function() {
 
     $(".hamburger-btn").click(function() {
         $('.menu-container').addClass('open')
-        $('.menu-wave').fadeIn(2000)
+        $('.menu-wave').fadeIn(1500)
+        $('.menu-li').addClass('show')
     })
     $(".close-btn").click(function() {
         $('.menu-container').removeClass('open')
         $('.menu-wave').hide()
+        $('.menu-li').removeClass('show')
     })
 
 
