@@ -25,7 +25,38 @@
 	.section-service-slider
 		transform: translateY(-80px)
 
-	// .bridge
+	.bridge
+		padding: 0 0 160px 0
+		background-image: url('../images/dest/wave-bridge-small.png')
+		background-repeat: no-repeat
+		background-position: top right
+		.section-title
+			text-align: left
+			margin: 0 0 80px 0
+		.content
+			display: flex
+			justify-content: space-between
+			align-items: flex-start
+		.paragraph-18
+			max-width: 190px
+			text-align: justify
+		.figure
+			margin: 0 0 0 36px
+			width: 100%
+			max-width: 1100px
+			position: relative
+		.line
+			width: 12px
+			height: 100%
+			position: absolute
+			background-color: $white
+		.line-1
+			left: 33%
+		.line-2
+			right: 33%
+		.bridge-img
+			width: 100%
+
 
 
 @media only screen and (max-width: 1280px)
@@ -38,4 +69,17 @@
 				display: none
 			.content
 				margin: 0
-	
+
+@media only screen and (max-width: 1024px)
+	.about
+		.bridge
+			padding: 30px 0 0 0 
+			background-image: none
+			.section-title
+				margin: 0 0 30px 0
+			.content
+				flex-direction: column
+			.paragraph-18
+				max-width: initial
+			.figure
+				margin: 30px 0 0 0
