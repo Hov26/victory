@@ -6,6 +6,8 @@ observer.observe();
 new WOW().init();
 
 $(document).ready(function() {
+    $('.hero-wave').fadeIn(2000)
+
     $('.service-btn').click(function() {
         var serviceBtn = $(this)
         if (!$(this).hasClass('active')) {
