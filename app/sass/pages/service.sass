@@ -3,6 +3,9 @@
 @import '../partials/contact-footer'
 	
 .service
+	.contact
+		.contact-wave
+			display: none
 	.hero
 		padding: 120px 0 0 0
 		background-image: url('../images/dest/wave-service-hero.png')
@@ -43,9 +46,12 @@
 		.services-menu
 			width: 40%	
 			max-width: 363px
-			// padding: 40px
+			min-width: 320px
 			background-color: #f6f7fb
 			margin: 0 44px 0 0
+			position: sticky
+			left: 30px
+			top: 120px
 		.service-btn
 			padding: 20px 40px
 			position: relative
@@ -91,7 +97,8 @@
 	.service
 		.hero
 			padding: 80px 0 0 0
-			// background-image: none
+			.content, .figure
+				max-width: initial
 			.container
 				flex-direction: column
 			.figure
@@ -101,4 +108,28 @@
 				margin: 0
 				padding: 0 0 74px 0
 			
-	
+@media only screen and (max-width: 900px)
+	.service
+		.section-services
+			.container
+				flex-direction: column
+			.services-menu
+				width: 100%
+				max-width: initial
+				margin: 0 0 32px 0
+				position: initial
+			.current-service
+				max-width: initial
+			.footer-content
+				flex-direction: column-reverse
+			.text-content
+				width: 100%
+				max-width: initial
+			.title-42
+				padding: 50px 0 0 0 
+			.footer-figure
+				max-width: initial
+				width: 100%
+				margin: 30px 0 0 0
+			
+			

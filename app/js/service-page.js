@@ -1,3 +1,10 @@
+// init lazy loading
+const observer = lozad();
+observer.observe();
+
+// // init wow js
+new WOW().init();
+
 $(document).ready(function() {
     $('.service-btn').click(function() {
         var serviceBtn = $(this)
