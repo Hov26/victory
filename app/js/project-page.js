@@ -8,6 +8,8 @@ new WOW().init();
 
 $(document).ready(function() {
 
+    $('.hero-title').fadeIn(2000)
+
     var reviewSlider = $('.review-slider.owl-carousel');
 
     reviewSlider.owlCarousel({
