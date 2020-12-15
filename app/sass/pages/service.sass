@@ -91,10 +91,20 @@
 		.footer-figure
 			max-width: 400px
 			margin: 0 56px 0 0
+			position: relative
 		.title-42
 			padding: 50px 0
 		.text-content
 			max-width: 310px
+		.square
+			width: 376px
+			height: 344px
+			background-color: $sectionBg
+			position: absolute
+			z-index: -1
+			bottom: -140px
+			left: -76px
+			opacity: 0.5
 	
 @media only screen and (max-width: 1023px)
 	.service
@@ -110,6 +120,9 @@
 				width: 100%
 				margin: 0
 				padding: 0 0 74px 0
+		.section-services
+			.square
+				display: none
 			
 @media only screen and (max-width: 900px)
 	.service
