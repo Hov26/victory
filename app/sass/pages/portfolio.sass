@@ -38,154 +38,61 @@
 			object-fit: cover
 			width: 100%
 			height: 100%
-	.home-portfolio
-		.row
-			position: relative
-			// &.row-1
-				// .container
-					// transform: translateY(-50px)
-				// &:before
-				// 	content: ""
-				// 	position: absolute
-				// 	width: 100%
-				// 	height: 500px
-				// 	bottom: 0
-				// 	left: 0
-				// 	z-index: -1
-				// 	background-image: url('../images/dest/hero-wave.png')
-				// 	transform: scaleX(-1)
-				// 	background-repeat: no-repeat
-				// 	background-size: cover
-				// 	background-position: bottom
-		// .row-2
-		// 	padding-bottom: 100px
-		// 	.container
-		// 		transform: translateY(-10px)
-		// .row-3
-		// 	padding-bottom: 150px
-		// 	.container
-		// 		transform: translateY(-50px)
-		// .row-4
-		// 	.container
-		// 		transform: translateY(-100px)
-		// .row-2, .row-4
-		// 	background-color: $sectionBg
-		.image-right
-			.figure
-				max-width: 564px
-		.image-left
-			.figure
-				max-width: 650px
-		.figure
-			width: 100%
-			display: block
-			font-size: 0
-			position: relative
-		.port-logo
-			width: 276px
-			position: absolute
-			top: -192px
-			left: -70px
-		.port-img
-			width: 100%
-		.port-content
-			max-width: 450px
-			margin: 0 80px
 
-		///////import css-variables from 
-		// .image-right
-		// 	text-align: left
-		// 	.project-type
-		// 		margin-bottom: 90px
-		// .image-left
-		// 	.project-type
-		// 		margin-bottom: 46px
-		
-		// .gray-bg
-		// 	height: 235px
-		// 	background-color: $sectionBg
-		// 	position: relative
-		// 	z-index: -1
-		// .bg-wave
-		// 	height: 378px
-		// 	background-image: url('../images/dest/wave-portfolio.png')
-		// 	background-repeat: no-repeat
-		// 	background-size: cover
-		// .row-1
-		// 	.container
-		// 		transform: translateY(-190px)
-		// 	.gray-bg
-		// 		transform: translateY(-40px)
-		// .row-5
-		// 	transform: translateY(-350px)
-		// 	.container
-		// 		transform: translateY(-100px)
-		// .row-2
-		// 	transform: translateY(-190px)
-		// 	.container
-		// 		transform: translateY(-200px)
-		// .row-4, .row-6, .row-7
-		// 	transform: translateY(-300px)
-		// .row-7
-		// 	.container
-		// 		transform: translateY(-200px)
-		// .row-8
-		// 	transform: translateY(-400px)
-		// .row-9
-		// 	transform: translateY(-450px)
-		// 	.container
-		// 		transform: translateY(-100px)
-		// .row-4, .row-8
-		// 	z-index: 1
+	.project-type
+		padding: 140px 0 0 0
+		position: relative	
+		&:nth-child(1), &:nth-child(4n)
+			&:before
+				position: absolute
+				width: 100%
+				height: 280px
+				content: ''
+				background-color: $sectionBg
+				z-index: -1
+				top: 0
+				left: 0
+		&:nth-child(4n)
+			transform: translateY(-60px)
+		&:nth-child(4n-6)
+			&:before
+				position: absolute
+				width: 100%
+				height: 378px
+				content: ''
+				background-image: url(../images/dest/wave-portfolio.png)
+				background-repeat: no-repeat
+				background-size: cover
+				z-index: -1
+				top: 0
+				left: 0
+		&:nth-child(odd)
+			.project-item-info-container
+				flex-direction: row
+			.project-info
+				margin: 0 0 0 60px
+			
+		&:nth-child(even)
+			.project-item-info-container
+				flex-direction: row-reverse
+			.project-info
+				margin: 0 60px 0 0
+	.project-item-info-container
+		display: flex
+		align-items: center
+		justify-content: space-between
+		margin-top: 40px
+	.project-figure
+		position: relative
+		z-index: 1
+	.project-info
+		width: 100%
+		max-width: 510px
+		text-align: left
 
-	.empty-box
-		position: absolute
-		top: 0
-		left: 0
-		z-index: -1
 
-	.projects
-		.project-row
-			position: relative
-			&.with-gray
-				.empty-box
-					width: 100%
-					height: 240px
-					background-color: $sectionBg
-			&.with-wave
-				.empty-box
-					width: 100%
-					height: 400px
-					background-image: url('../images/dest/wave-portfolio.png')
-					background-repeat: no-repeat
-					background-size: cover
-			&.text-right
-				.project-info
-					margin: 0 0 0 60px
-				.project-type
-					margin: 0 0 50px 0
-			&.text-left
-				.project-info
-					margin: 0 60px 0 0
-				.project-container
-					flex-direction: row-reverse
-				.project-type
-					margin: 0 0 20px 0
-		.project-container
-			display: flex
-			align-items: center
-			justify-content: space-between
-		.project-item
-			margin: 40px 0 0 0
-		.project-info
-			max-width: 510px
-		.figure
-			max-width: 600px
 
-		.row-1
-			padding: 60px 0 0 0
-		.row-2
-			padding: 200px 0 0 0
+
 		
 
 
@@ -195,7 +102,6 @@
 @media only screen and (max-width: 1023px)
 	.portfolio
 		.hero
-			padding: 80px 0 0 0
 			.content, .figure
 				max-width: initial
 			.container
@@ -205,24 +111,33 @@
 			.content
 				width: 100%
 				margin: 0
-				padding: 0 0 74px 0
+				padding: 0 0 50px 0
 
-		.home-portfolio
-			// .row
-			// 	padding: 0 0 90px 0
-			// .row-4
-			// 	padding: 0
-			.port-content
-				margin: 16px 0 0 0
-			.port-logo
-				display: none
 		
 			
-@media only screen and (max-width: 767px)
+@media only screen and (max-width: 900px)
 	.portfolio
-		.home-portfolio
-			// .row
-			// 	&:first-child
-			// 		&:before
-			// 			height: 120px
-		
+		.hero
+			.container
+				transform: initial
+		.project-type
+			padding: 70px 0 0 0
+			&:before
+				position: absolute
+				width: 100%
+				height: 180px !important
+				content: ''
+				background-color: $sectionBg
+				z-index: -1
+				top: 0
+				left: 0
+				background-image: none !important
+			// &:nth-child(4n-6)
+			// 	&:before
+			.project-item-info-container
+				flex-direction: column !important
+			.project-info
+				max-width: initial
+				margin: 20px 0 60px 0 !important
+			.project-type-heading
+				margin-bottom: 100px
