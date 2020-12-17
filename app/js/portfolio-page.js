@@ -7,5 +7,4 @@ new WOW().init();
 
 $(document).ready(function() {
     $('.hero-wave').fadeIn(2000)
-
 })
