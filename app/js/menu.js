@@ -1,4 +1,5 @@
 $(document).ready(function() {
+
     $(window).scroll(function() {
         if ($(this).scrollTop() > 10) {
             $('.header-container').addClass('with-bg')
@@ -14,6 +15,9 @@ $(document).ready(function() {
         $('.menu-li').addClass('show')
         $('.menu-brand-logo').addClass('show')
         $('body').addClass('scroll-off')
+        if ($(window).width() < 768) {
+            $('.menu-socials a').addClass('show')
+        }
     })
 
     // Close menu
@@ -23,5 +27,8 @@ $(document).ready(function() {
         $('.menu-li').removeClass('show')
         $('.menu-brand-logo').removeClass('show')
         $('body').removeClass('scroll-off')
+        if ($(window).width() < 768) {
+            $('.menu-socials a').removeClass('show')
+        }
     })
 })

@@ -147,6 +147,12 @@
 		position: initial
 		display: flex
 		justify-content: center
-		transform: translateY(-150px)
+		transform: translateY(-100px)
 		.social
+			transform: translateY(200px)
 			margin: 0 10px 
+			opacity: 0
+			transition: all 0.8s ease
+			&.show
+				opacity: 1
+				transform: initial
