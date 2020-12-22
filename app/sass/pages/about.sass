@@ -8,11 +8,13 @@
 			display: none
 	.hero
 		position: relative
-		background-image: url('../images/dest/wave-hero-about.png')
-		background-repeat: no-repeat
-		background-size: cover
-		background-position: left bottom
+		// background-image: url('')
+		// background-repeat: no-repeat
+		// background-size: cover
+		// background-position: left bottom
 		padding: 260px 0 
+		.about-hero-wave
+			display: none
 		.hero-logo
 			width: 100%
 			max-width: 991px
@@ -29,9 +31,14 @@
 		transform: translateY(-80px)
 
 	.bridge
-		background-image: url('../images/dest/wave-bridge-small.png')
-		background-repeat: no-repeat
-		background-position: top right
+		position: relative
+		.wave-bridge
+			width: 100%
+			max-width: 480px
+			position: absolute
+			right: 0
+			top: 0
+			display: none
 		.section-title
 			text-align: left
 			margin: 0 0 80px 0
@@ -80,8 +87,6 @@
 	.about
 		.hero
 			padding: 160px 0 120px 0
-			background-size: 127% 59%
-			background-position: bottom
 			.hero-logo
 				display: none
 			.content

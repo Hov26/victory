@@ -1,10 +1,13 @@
 .founder
 	position: relative
 	padding: 0 0 60px 0
-	background-image: url('../../images/dest/wave-founder.png')
-	background-repeat: no-repeat
-	background-position: left top
-	background-size: contain
+	.founder-wave
+		display: none
+		position: absolute
+		left: 0
+		top: 0
+		width: 100%
+		max-width: 600px
 	.top-content
 		display: flex
 		justify-content: flex-end
@@ -48,7 +51,8 @@
 
 @media only screen and (max-width: 767px)
 	.founder
-		background-image: none
+		.founder-wave
+			display: none !important
 		.section-title
 			align-self: flex-start
 			margin: 0 0 30px 50px

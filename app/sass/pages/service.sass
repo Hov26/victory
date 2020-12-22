@@ -6,9 +6,22 @@
 	.contact
 		.contact-wave
 			display: none
+	.figure-wrapper
+		position: relative
 	.hero
 		padding: 120px 0 0 0
 		position: relative
+		.hero-title
+			transform: translateY(400px)
+			transition: all 1.2s ease
+		.hero-paragraph
+			transform: translateY(600px)
+			transition: all 1.6s ease
+		.hero-title, .hero-paragraph
+			opacity: 0
+			&.animate
+				opacity: 1
+				transform: initial
 		.hero-wave
 			width: 100%
 			position: absolute
