@@ -66,12 +66,17 @@
 				z-index: -1
 				top: 0
 				left: 0
+				opacity: 0
+				transition: all 1s linear
+		&.animate-wave
+			&:nth-child(4n-6)
+				&:before
+					opacity: 1
 		&:nth-child(odd)
 			.project-item-info-container
 				flex-direction: row
 			.project-info
 				margin: 0 0 0 60px
-			
 		&:nth-child(even)
 			.project-item-info-container
 				flex-direction: row-reverse
