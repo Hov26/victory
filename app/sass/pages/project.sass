@@ -3,6 +3,7 @@
 
 .project
 	.contact
+		padding: 90px 0 0 0
 		.contact-wave
 			display: none
 	.hero
@@ -11,7 +12,10 @@
 		position: relative
 		padding: 0 0 100px 0
 		.hero-title
-			display: none
+			opacity: 0
+			transition: all 4s ease
+			&.show
+				opacity: 1
 		.hero-wave
 			width: 100%
 			position: absolute
@@ -33,7 +37,8 @@
 	.about-project
 		.container
 			position: relative
-			transform: translateY(-180px)
+			margin-top: -180px
+			padding: 0 40px 90px 40px
 		.gray-bg
 			width: 100%
 			height: 465px
@@ -44,6 +49,16 @@
 			z-index: -1
 		.figure-wrapper
 			position: relative
+		.figure
+			position: relative
+			padding-top: 40%
+		.project-img-1, .project-img-2, .project-img-3
+			position: absolute
+			top: 0
+			left: 0
+			width: 100%
+			height: 100%
+			object-fit: cover
 		.about-text-content
 			width: 100%
 			max-width: 685px
@@ -60,6 +75,9 @@
 			width: 60%
 			max-width: 600px
 			margin: 0 60px 0 0
+		.process-figure
+			position: relative
+			padding-top: 130%
 		.p-2
 			margin: 20px 0 0 0
 		.title-64

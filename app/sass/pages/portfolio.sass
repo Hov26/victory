@@ -2,6 +2,7 @@
 	
 .portfolio
 	.contact
+		padding: 90px 0 0 0
 		.contact-wave
 			display: none
 	.hero
@@ -84,6 +85,8 @@
 				margin: 0 60px 0 0
 	.project-url
 		display: block
+		&:hover .port-img
+			filter: grayscale(0)
 	.project-item-info-container
 		display: flex
 		align-items: center
@@ -98,9 +101,8 @@
 		max-width: 510px
 		text-align: left
 	.port-img
-		transition: all .8s ease
-		&:hover
-			transform: scale(1.2)
+		transition: all 1s ease
+		filter: grayscale(100%)
 
 @media only screen and (max-width: 1023px)
 	.portfolio
