@@ -6,12 +6,6 @@
 	.hero
 		padding: 120px 0 0 0
 		position: relative
-		.hero-wave
-			width: 100%
-			position: absolute
-			left: 0
-			bottom: 0
-			display: none
 		.container
 			display: flex
 			justify-content: space-between
@@ -53,24 +47,6 @@
 				left: 0
 		&:nth-child(4n)
 			transform: translateY(-60px)
-		&:nth-child(4n-6)
-			&:before
-				position: absolute
-				width: 100%
-				height: 378px
-				content: ''
-				background-image: url(../images/dest/wave-portfolio.png)
-				background-repeat: no-repeat
-				background-size: cover
-				z-index: -1
-				top: 0
-				left: 0
-				opacity: 0
-				transition: all 1s linear
-		&.animate-wave
-			&:nth-child(4n-6)
-				&:before
-					opacity: 1
 		&:nth-child(odd)
 			.project-item-info-container
 				flex-direction: row
@@ -141,10 +117,3 @@
 				margin: 20px 0 60px 0 !important
 			.project-type-heading
 				margin-bottom: 100px
-
-@media only screen and (max-width: 450px)
-	.portfolio
-		.hero
-			.hero-wave
-				bottom: initial
-				top: 47%
