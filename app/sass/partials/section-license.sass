@@ -1,53 +1,49 @@
 .license
-	padding: 100px 0
+	padding: 60px 0
 	.row	
 		display: flex
 		align-items: flex-start
-		margin: 45px 0 0 0
+		
 		&:nth-child(2)
+			margin: 45px 0 0 0
 			.title-54
 				max-width: 1000px
-	svg
-		margin: 12px 0 0 0
-		path 
-			stroke-dasharray: 0 300
-			transition: all 2s linear
-			&.animate
-				stroke-dasharray: 300 0
-	.title-54
-		margin: 0 0 0 50px
 
 
-@media only screen and (min-width: 1280px)
-	.license
-		.row	
-			&:nth-child(2)
-				.title-54
-					min-height: 136px
+// @media only screen and (min-width: 1280px)
+// 	.license
+// 		.row	
+// 			&:nth-child(2)
+// 				.title-54
+					// min-height: 136px
 		
 
-@media only screen and (max-width: 1280px)
-	.license
-		padding: 0 0 60px 0
-		.row
-			flex-direction: column
-		.title-54
-			padding: 25px 30px 0 30px
-			margin: 0
+// @media only screen and (max-width: 1280px)
+// 	.license
+// 		padding: 0 0 60px 0
+// 		.row
+// 			flex-direction: column
+// 		.title-54
+// 			padding: 25px 30px 0 30px
+// 			margin: 0
 
 @media only screen and (max-width: 767px)
 	.license
-		&.home-license
-			position: relative
-			&:after 
-				content: ''
-				position: absolute
-				top: -50px
-				left: 0
-				width: 100%
-				height: 50px
-				background-color: $white
+		padding: 0
 		.row
-			margin: 25px 0 0 0
-			&:first-child
-				margin: 0
+			&:nth-child(2)
+				margin: 20px 0 0 0
+// 		&.home-license
+// 			position: relative
+// 			&:after 
+// 				content: ''
+// 				position: absolute
+// 				top: -50px
+// 				left: 0
+// 				width: 100%
+// 				height: 50px
+// 				background-color: $white
+// 		.row
+// 			margin: 25px 0 0 0
+// 			&:first-child
+// 				margin: 0
