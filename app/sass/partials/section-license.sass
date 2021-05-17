@@ -1,5 +1,8 @@
 .license
-	padding: 60px 0
+	display: flex
+	flex-direction: column
+	justify-content: center
+	min-height: 301px
 	.row	
 		display: flex
 		align-items: flex-start
@@ -9,9 +12,14 @@
 			.title-54
 				max-width: 1000px
 
+@media only screen and (max-width: 1024px)
+	.license
+		min-height: 200px
+
 @media only screen and (max-width: 767px)
 	.license
-		padding: 0
+		.title-54
+			min-height: 120px
 		.row
 			&:nth-child(2)
 				margin: 20px 0 0 0
