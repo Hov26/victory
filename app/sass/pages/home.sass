@@ -92,13 +92,12 @@
 		.service-logo
 			max-width: 380px
 			width: 100%
-			position: absolute
-			left: 0
 		.service-p
 			max-width: 800px
-			margin-left: 18vw
+			margin-left: 3vw
 		.service-ul
 			display: flex
+			justify-content: space-between
 			flex-wrap: wrap
 			list-style-type: none
 			padding: 0
@@ -109,7 +108,9 @@
 			max-width: 360px
 			flex-grow: 1
 			position: relative
-			margin: 20px
+			margin-top: 40px
+			&:nth-child(2), &:nth-child(5)
+				margin: 40px 20px 0 20px
 		.service-title
 			text-transform: uppercase
 		.service-inner-ul
@@ -254,6 +255,9 @@
 			.image-right, .image-left
 				.figure
 					max-width: initial
+		.services
+			.service-logo
+				display: none
 
 
 @media only screen and (max-width: 767px)
@@ -298,6 +302,8 @@
 			.service-li
 				width: 100%
 				margin: 70px 0 0 0 
+				&:nth-child(2), &:nth-child(5)
+					margin: 70px 0 0 0 
 			.service-footer
 				.read-more
 					margin-top: 20px
