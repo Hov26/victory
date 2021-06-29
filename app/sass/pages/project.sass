@@ -43,11 +43,20 @@
 			p:nth-child(2)
 				margin: 20px 0 0 0
 		.current-project-slider
+			&:before
+				content: ""
+				position: absolute
+				bottom: 0
+				left: 0
+				width: 100%
+				height: 100%
+				background: linear-gradient(to bottom, transparent 0%, #131313 150%)
+				z-index: 1
 			.owl-nav
 				position: absolute
-				left: 50%
-				transform: translateX(-50%)
-				bottom: 20px
+				left: 70px
+				bottom: 30px
+				z-index: 1
 				.owl-prev, .owl-next 
 					margin: 0 20px
 		.process
